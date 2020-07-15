@@ -1,6 +1,6 @@
 www.itac85.com
-$ dig itac85.com +noall +answer
-> itac85.com     3600    IN A     185.199.108.153
-> itac85.com     3600    IN A     185.199.109.153
-> itac85.com     3600    IN A     185.199.110.153
-> itac85.com     3600    IN A     185.199.111.153
+
+
+
+
+
