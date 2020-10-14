@@ -1,15 +1,77 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title> ITAC85's Website </title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <! Script also found at http://www.itac85.ml/jquery.js !>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> ITAC85's Website </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+/* My confusing and unorganized CSS to my website that I should save into a .css file */
+
+/* Loading Screen styling */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100%;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 200px;
+  position: relative;
+  border: 4px solid #000;
+  border-radius: 200px;
+  animation: loader 2s infinite ease-in-out;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #2cc93c;
+  border-radius: 200px;
+  animation: loader-inner 2s infinite ease-in-out;
+}
+
+/* Keyframes to the loading screen (animations) */
+@keyframes loader {
+  0% { transform: rotate(90deg);}
+  25% { transform: rotate(90deg);}
+  50% { transform: rotate(270deg);}
+  75% { transform: rotate(270deg);}
+  100% { transform: rotate(450deg);}
+}
+
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* That navigation bar styling thing */
 .mobile-container {
   max-width: 480px;
   margin: auto;
@@ -53,6 +115,7 @@ body {
   color: black;
 }
 
+/* Active and inactive links...? */
 .active-no {
   background: -webkit-gradient(linear, left top, left bottom, from(#4fc254), to(#47964a));
   color: white;
@@ -68,6 +131,7 @@ body {
   animation-fill-mode: both;
 }
 
+/* Popup animations for the links on the navbar */
 .popup {
   position: relative;
   animation-name: popup;
@@ -116,6 +180,7 @@ body {
   animation-fill-mode: both;
 }
 
+/* Animation keyframes to the links on the navbar */
 @keyframes popup {
   from {left: -100%; background-color: white;}
   to {left: 0px;}
@@ -126,6 +191,7 @@ body {
   to {top: 0px;}
 }
 
+/* CSS button with a YouTube logo on it */
 .button-css-yt {
   width: 220px;
   height: 46px;
@@ -161,6 +227,7 @@ body {
   height: 54px;
 }
 
+/* Re-created Windows 7 button because I like the detail in it */
 .win7button {
   margin: 0;
   padding: 2px 6px 2px 6px;
@@ -205,13 +272,20 @@ body {
   outline:solid #3c7eb1 1px;
   box-shadow: 0 0 0 1px #2c628b;
   outline:none;
-  border-radius: 3px; // support: IE9+ ;)
-  background-clip: content-box; // support: IE9+
+  border-radius: 2px;
+  background-clip: content-box;
+}
+
+/* Preventing scrolling when the page is loading (Not tested) */
+.stop-scrolling-on-page-load {
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  width:100%;
 }
 </style>
 </head>
 <body>
-
 <!-- Top Navigation Menu -->
 <div class="topnav">
 	<a style="font-family:Calibri,Arial,Segoe UI,Helvetica,Trebuchet MS,Tahoma,Verdana,Candara;" class="active-no">itac85.ml</a>
@@ -229,6 +303,7 @@ body {
   </a>
 </div>
 
+<!-- The actual website content -->
 <center>
 
 <a> Translate this website using <b>Google Translate</b> here! </a>
@@ -251,9 +326,7 @@ body {
 
 <hr style="color:black;">
 
-<iframe width="434" height="296"
-
-src="http://www.itac85.ml/videos/240p.html" frameborder="0" allowfullscreen="true">
+<iframe width="434" height="296" src="http://www.itac85.ml/videos/240p.html" frameborder="0" allowfullscreen="true">
 </iframe>
 <div> </div>
 
@@ -287,6 +360,24 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+</script>
+
+<!-- The loading screen -->
+<div class="loader-wrapper">
+<span class="loader"><span class="loader-inner"></span></span>
+</div>
+<!-- jQuery script to make the loading screen disappear when the website loads -->
+<script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+</script>
+
+<!-- jQuery script to prevent scrolling whilst the website is loading (Not tested) -->
+<script>
+$(window).on("load",function(){
+  $('html').removeAttr('stop-scrolling-on-page-load')
+});
 </script>
 
 </body>
