@@ -3,10 +3,20 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Website is down. </title>
+<style>
+.dark-mode {
+  background-color: black;
+  color: #d6d6d6;
+}
+</style>
 </head>
 <body>
 
 <center>
+
+<button onclick="myFunction()">Switch Theme</button>
+
+<hr>
 
 <h1> This website is currently down. </h1>
 
@@ -22,7 +32,7 @@
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 12, 2020").getTime();
+var countDownDate = new Date("Nov 17, 2020").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -54,6 +64,13 @@ var x = setInterval(function() {
 <noscript>
  <h1> JavaScript is not enabled. </h1>
 </noscript>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
