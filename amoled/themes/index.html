@@ -146,7 +146,7 @@ body {
   border-radius: 3px;
 }
 
-#amoled-ui {
+#dark-ui {
   display: none;
   top: 35px;
   left: 35px;
@@ -240,11 +240,11 @@ body {
 <div id="content">
   <h2>Themes</h2>
   <hr class="hr">
-  <button type="button" class="theme-disabled">Dark theme</button>
+  <button type="button" class="theme-button" onclick="darkOpen()">Dark theme</button>
   <p style="font-size: 8px;"> </p>
   <button type="button" class="theme-button" onclick="lightOpen()">Light theme</button>
   <p style="font-size: 8px;"> </p>
-  <button type="button" class="theme-button" onclick="amoledOpen()">Amoled theme</button>
+  <button type="button" class="theme-disabled" onclick="amoledOpen()">Amoled theme</button>
   <p style="font-size: 16px;"> </p>
   <button type="button" class="theme-button" onclick="basicOpen()">Basic theme</button>
 </div>
@@ -268,8 +268,8 @@ body {
 </div>
 
 
-<div id="amoled-ui">
-<a> Are you sure you would like to set the theme to <br> "<b>Amoled Theme</b>"? </a>
+<div id="dark-ui">
+<a> Are you sure you would like to set the theme to <br> "<b>Dark Theme</b>"? </a>
 <br>
 <br>
 <br>
@@ -277,7 +277,7 @@ body {
 
 <a style="opacity: 0;">.</a>
 
-<button type="button" class="theme-button" onclick="amoledClose()">No</button>
+<button type="button" class="theme-button" onclick="darkClose()">No</button>
 </div>
 
 <div id="basic-ui">
@@ -304,13 +304,13 @@ function lightClose() {
   document.getElementById("bg-dark").style.display = "none";
 }
 
-function amoledOpen() {
-  document.getElementById("amoled-ui").style.display = "block";
+function darkOpen() {
+  document.getElementById("dark-ui").style.display = "block";
   document.getElementById("bg-dark").style.display = "block";
 }
 
-function amoledClose() {
-  document.getElementById("amoled-ui").style.display = "none";
+function darkClose() {
+  document.getElementById("dark-ui").style.display = "none";
   document.getElementById("bg-dark").style.display = "none";
 }
 
