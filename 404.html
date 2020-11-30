@@ -1,70 +1,84 @@
-
-<!DOCTYPE html>
 <html>
 <head>
-<title> You found a nonexistent website! </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITAC85's Website | 404 Error</title>
 <style>
 body {
-  margin: 0;
+  font-size: 11px;
+  margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
-  background: #292929;
-  color: #d1d1d1;
+  font-family: Verdana, Arial, Segoe UI, Calibri, sans-serif;
 }
 
 #header {
-  padding: 7px;
-  background: #2a3036;
+  padding: 3px;
+  background: #ededed;
+  text-allign: center;
+  font-size: 11px;
 }
 
-.hr {
-  border: 3px solid #4f4f4f;
-  border-radius: 3px;
+#thing {
+  font-size: 13px;
 }
 
 #content {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
-}
-
-.link:link {
-  text-decoration: none;
-  color: #84a5e3;
-}
-
-.link:visited {
-  text-decoration: none;
-  color: #84c0e3;
-}
-
-.link:hover {
-  text-decoration: underline;
-  color: #aec6f2;
-}
-
-.link:active {
-  text-decoration: underline;
-  color: #60759c;
+  max-width: 600px;
 }
 </style>
 </head>
+
 <body>
 
-<div id="header">
-  <center>
-    <a> itac85.ml </a>
-  </center>
-</div>
+<center>
 
 <div id="content">
-  <h2>Webpage Not Found</h2>
-  <hr class="hr">
-  <a style="font-size: 25px;"> Oops! </a>
-  <br>
-  <br>
-  <a> That webpage doesn't exist! </a>
+
+<div id="header">
+
+<center>
+<a> 404 Error </a>
+</center>
+
 </div>
+
+<p style="font-size: 7px;"> </p>
+
+<tr>
+  <td>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" id="table5">
+	  <tr>
+		<td width="100%" valign="top">
+			<h5 style="text-align: center; font-size: 12px;">&nbsp;<a href="../home">Home</a>&nbsp;&nbsp; 
+			<a href="../announcements">Announcements</a>&nbsp;&nbsp; 
+			<b> 
+			<a href="../software">Software</a></b>&nbsp;&nbsp;
+		    <a href="../malware">Malware</a>&nbsp;&nbsp;
+			<a href="../img">IMG's</a>&nbsp;&nbsp;
+			<a href="../iso">ISO's</a>&nbsp;&nbsp;
+			<a href="../themes">Themes</a></h5>
+			</td>
+			</tr>
+			</table>
+			</td>
+		  </tr>
+		</table>
+	</td>
+	</tr>
+  </table>
+  </td>
+</tr>
+
+<a id="thing"><b>404 Error!</b></a>
+<hr>
+<a id="demo">The URL requested could not be found.</a>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"The URL requested <b><i>" + window.location.href + "</i></b> could not be found.";
+</script>
+
+</div>
+
+</center>
 
 </body>
 </html>
